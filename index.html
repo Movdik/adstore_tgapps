@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <h1>Моя первая Mini App</h1>
+    <button onclick="sendToBot()">Отправить сообщение боту</button>
+    <button onclick="closeApp()">Закрыть</button>
+
+    <script>
+        // Эта функция выполняется при загрузке
+        Telegram.WebApp.ready();
+
+        function sendToBot() {
+            // Отправляем данные боту
+            Telegram.WebApp.sendData("Привет от Mini App!");
+        }
+
+        function closeApp() {
+            // Закрываем приложение
+            Telegram.WebApp.close();
+        }
+    </script>
+</body>
+</html>
